@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiSpeechToTextSample.Platforms;
+using Microsoft.Extensions.Logging;
 
 namespace MauiSpeechToTextSample;
 
@@ -17,6 +18,12 @@ public static class MauiProgram
 
 #if DEBUG
 		builder.Logging.AddDebug();
+#endif
+
+		builder.Services.AddTransient<MainPage>();
+
+#if ANDROID
+		builder.Services.AddSingleton<ISpeechToText, SpeechToTextImplementation>();
 #endif
 
 		return builder.Build();
