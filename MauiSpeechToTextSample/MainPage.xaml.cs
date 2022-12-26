@@ -33,7 +33,15 @@ public partial class MainPage : ContentPage
                 RecognitionText = await speechToText.Listen(CultureInfo.GetCultureInfo("en-us"),
                     new Progress<string>(partialText =>
                 {
-                    RecognitionText = partialText;
+                    if (DeviceInfo.Platform == DevicePlatform.Android)
+                    {
+                        RecognitionText = partialText;
+                    }
+                    else if (DeviceInfo.Platform == DevicePlatform.iOS)
+                    {
+                        RecognitionText += partialText + " ";
+                    }
+
                     OnPropertyChanged(nameof(RecognitionText));
                 }), tokenSource.Token);
             }

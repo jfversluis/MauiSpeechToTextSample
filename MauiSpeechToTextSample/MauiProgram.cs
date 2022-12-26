@@ -22,7 +22,7 @@ public static class MauiProgram
 
 		builder.Services.AddTransient<MainPage>();
 
-#if ANDROID
+#if ANDROID || IOS
 		builder.Services.AddSingleton<ISpeechToText, SpeechToTextImplementation>();
 #endif
 
