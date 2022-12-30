@@ -21,10 +21,7 @@ public static class MauiProgram
 #endif
 
 		builder.Services.AddTransient<MainPage>();
-
-#if ANDROID || IOS || WINDOWS
 		builder.Services.AddSingleton<ISpeechToText, SpeechToTextImplementation>();
-#endif
 
 		return builder.Build();
 	}

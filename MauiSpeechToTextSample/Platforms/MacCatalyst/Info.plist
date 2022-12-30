@@ -26,5 +26,9 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Recognize speech demo!</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>I will need the microphone to listen to your speech</string>
 </dict>
 </plist>

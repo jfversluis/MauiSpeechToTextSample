@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using System.Threading;
 
 namespace MauiSpeechToTextSample;
 
@@ -37,8 +36,7 @@ public partial class MainPage : ContentPage
                     {
                         RecognitionText = partialText;
                     }
-                    else if (DeviceInfo.Platform == DevicePlatform.iOS
-                        || DeviceInfo.Platform == DevicePlatform.WinUI)
+                    else
                     {
                         RecognitionText += partialText + " ";
                     }
