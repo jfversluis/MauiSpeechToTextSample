@@ -15,8 +15,13 @@
                 HorizontalOptions="Center" />
 
             <Button
-                Text="Listen"
-                Command="{Binding ListenCommand}"
+                Text="EN"
+                Command="{Binding ListenCommandEnglish}"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="CN"
+                Command="{Binding ListenCommandChinese}"
                 HorizontalOptions="Center" />
 
             <Button
